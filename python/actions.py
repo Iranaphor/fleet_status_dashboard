@@ -54,6 +54,9 @@ def git_status(repo_config):
         else:
             return f"Error: {result.stderr.strip()}"
     except Exception as e:
+        if 'No such file or directory' in str(e):
+            print(str(e))
+            return 'Config DIR Error'
         return f"Exception: {str(e)}"
 
 
@@ -75,6 +78,9 @@ def git_branch(repo_config):
         else:
             return f"Error: {result.stderr.strip()}"
     except Exception as e:
+        if 'No such file or directory' in str(e):
+            print(str(e))
+            return 'Config DIR Error'
         return f"Exception: {str(e)}"
 
 
@@ -96,6 +102,9 @@ def git_remote_name(repo_config):
         else:
             return f"Error: {result.stderr.strip()}"
     except Exception as e:
+        if 'No such file or directory' in str(e):
+            print(str(e))
+            return 'Config DIR Error'
         return f"Exception: {str(e)}"
 
 
@@ -117,7 +126,11 @@ def git_remote(repo_config):
 
         else:
             return f"Error: {result.stderr.strip()}"
+
     except Exception as e:
+        if 'No such file or directory' in str(e):
+            print(str(e))
+            return 'Config DIR Error'
         return f"Exception: {str(e)}"
 
 
