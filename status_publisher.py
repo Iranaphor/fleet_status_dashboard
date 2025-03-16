@@ -7,40 +7,23 @@ import threading
 import subprocess
 import paho.mqtt.client as mqtt
 
+from actions import git_status, git_branch, git_remote, robot_name, battery, last_online
+
 # Read configuration from a YAML file
-CONFIG_FILE = './status_config.yaml'  # adjust the path as needed
+CONFIG_FILE = './config.yaml'  # adjust the path as needed
 
 def load_config(config_file):
     with open(config_file, 'r') as f:
         return yaml.safe_load(f)
 
-# Action: git_status
-def git_status(repo_config):
-    """
-    Run 'git status' in the specified repo directory.
-    Returns the output or error.
-    """
-    repo_dir = repo_config.get('dir')
-    try:
-        result = subprocess.run(
-            ['git', 'status'],
-            cwd=repo_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=30
-        )
-        if result.returncode == 0:
-            return result.stdout.strip()
-        else:
-            return f"Error: {result.stderr.strip()}"
-    except Exception as e:
-        return f"Exception: {str(e)}"
-
 # Dictionary mapping action names to functions
 ACTION_FUNCTIONS = {
     'git_status': git_status,
-    # add more actions here as needed
+    'git_branch': git_branch,
+    'git_remote': git_remote,
+    'robot_name': robot_name,
+    'battery': battery,
+    'last_online': last_online
 }
 
 # MQTT Publisher
@@ -67,7 +50,7 @@ class MQTTPublisher:
         print(f"Published to {full_topic}: {message}")
 
 # Worker thread for running actions repeatedly
-def action_worker(repo_name, action_name, repo_config, action_config, publisher, robot_name):
+def action_worker(repo_name, action_name, repo_config, action_config, publisher, manufacturer, robot_name, topic_group):
     hz = action_config.get('hz', 1)  # default to 1 Hz if not specified
     # Convert frequency to period (seconds)
     period = 1 / hz if hz > 0 else 1
@@ -75,7 +58,7 @@ def action_worker(repo_name, action_name, repo_config, action_config, publisher,
     if action_func is None:
         print(f"Action '{action_name}' not implemented.")
         return
-    topic = f"/{robot_name}/{repo_name}/{action_name}"
+    topic = f"/{manufacturer}/{robot_name}/{topic_group}/{repo_name}/{action_name}"
     while True:
         # Execute the action function with the repo configuration
         result = action_func(repo_config)
@@ -88,27 +71,63 @@ def main():
     config = load_config(CONFIG_FILE)
 
     # Retrieve configuration sections
-    repos = config.get('repos', {})
+    robot_ws = config.get('workspace_dashboard', {}).get('robot_ws', {})
+    research_ws = config.get('workspace_dashboard', {}).get('research_ws', {})
+    meta = config.get('workspace_dashboard', {}).get('meta', {})
+
+    # Retrieve other diagnostics
+    repositories = config.get('repositories', {})
     actions = config.get('actions', {})
     publish_config = config.get('publish', {}).get('mqtt', {})
 
     # Use an environment variable or default for robot_name
-    robot_name = os.environ.get('ROBOT_NAME', 'default_robot')
+    manufacturer = os.environ.get('ROBOT_MANUFACTURER')
+    serial_number = os.environ.get('ROBOT_SERIAL_NUMBER')
+    robot_name = os.environ.get('ROBOT_NAME')
 
     # Initialize MQTT publisher
-    broker_ip = publish_config.get('broker_ip', 'localhost')
-    broker_port = publish_config.get('broker_port', 1883)
-    namespace = publish_config.get('namespace', '')
+    #broker_ip = publish_config.get('broker_ip', 'local')
+    #broker_port = publish_config.get('broker_port', 1883)
+    broker_ip = os.environ.get('MQTT_BROKER_IP')
+    broker_port = int(os.environ.get('MQTT_BROKER_PORT'))
+    namespace = os.environ.get('MQTT_BROKER_NS')
     publisher = MQTTPublisher(broker_ip, broker_port, namespace)
 
+    # For each workspace, schedule its actions in separate threads
+    topic_group = 'dashboard/workspaces'
+    for ws_name, ws_config in [['robot_ws', robot_ws], ['research_ws', research_ws]]:
+        ws_actions = ws_config.get('actions', [])
+        for action_name in ws_actions:
+            action_config = actions.get(action_name, {})
+            t = threading.Thread(
+                target=action_worker,
+                args=(ws_name, action_name, ws_config, action_config, publisher, manufacturer, serial_number, topic_group),
+                daemon=True
+            )
+            t.start()
+            print(f"Started thread for dashboard workspace repo '{ws_name}' action '{action_name}'.")
+
+    # For each meta action, schedule its actions in separate threads
+    topic_group = 'dashboard'
+    for action_name in meta.get('actions', []):
+        action_config = actions.get(action_name, {})
+        t = threading.Thread(
+            target=action_worker,
+            args=('meta', action_name, None, action_config, publisher, manufacturer, serial_number, topic_group),
+            daemon=True
+        )
+        t.start()
+        print(f"Started thread for dashboard meta action '{action_name}'.")
+
     # For each repo, schedule its actions in separate threads
-    for repo_name, repo_config in repos.items():
+    topic_group = 'repositories'
+    for repo_name, repo_config in repositories.items():
         repo_actions = repo_config.get('actions', [])
         for action_name in repo_actions:
             action_config = actions.get(action_name, {})
             t = threading.Thread(
                 target=action_worker,
-                args=(repo_name, action_name, repo_config, action_config, publisher, robot_name),
+                args=(repo_name, action_name, repo_config, action_config, publisher, manufacturer, serial_number, topic_group),
                 daemon=True
             )
             t.start()

@@ -1,0 +1,43 @@
+# MRS Fleet Dashboard Topics
+workspace_dashboard:
+    robot_ws:  # Robot WS
+        actions: [git_status, git_branch]
+        dir: /home/james/ros2_ws/src/environment_template
+    research_ws:  # Research WS
+        actions: [git_status, git_branch, git_remote]
+        dir: /home/james/ros2_ws/src/ply_publisher
+    meta:
+        actions: [robot_name, battery, last_online]
+
+
+# Secondary Publishers
+repositories:
+    environment_template:
+        actions: [git_status, git_branch]
+        dir: /home/james/ros2_ws/src/environment_template
+    ply_publisher:
+        actions: [git_status, git_branch]
+        dir: /home/james/ros2_ws/src/ply_publisher
+
+
+actions:
+    git_status:
+        hz: 0.1 #5m
+    git_branch:
+        hz: 0.2 #5m
+    git_remote:
+        hz: 0.2 #5m
+    robot_name:
+        hz: 0.2 #5m
+    battery:
+        hz: 0.2 #5m
+    last_online:
+        hz: 0.2 #5m
+
+publish:
+    mqtt:
+        broker_ip: my.broker.online
+        broker_port: 1883
+        namespace: mrs_fleet_dashboard
+        topic: /{manufacturer}/{serial_number}/{repo}/{action}
+
