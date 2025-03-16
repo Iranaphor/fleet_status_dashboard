@@ -12,8 +12,9 @@ import paho.mqtt.client as mqtt
 CONFIG_FILE = './config.yaml'
 
 # Retrieve manufacturer and serial number from environment variables
-MANUFACTURER = os.getenv("ROBOT_MANUFACTURER")
-SERIAL_NUMBER = os.getenv("ROBOT_SERIAL_NUMBER")
+ROBOT_MANUFACTURER = os.getenv("ROBOT_MANUFACTURER")
+ROBOT_SERIAL_NUMBER = os.getenv("ROBOT_SERIAL_NUMBER")
+ROBOT_NAME = os.getenv("ROBOT_SERIAL_NUMBER")
 
 # Retrieve mqtt broker details
 MQTT_BROKER_IP = os.getenv("MQTT_BROKER_IP")
@@ -48,7 +49,7 @@ def update_repo(repo_dir, new_remote, new_branch, workspace):
         print('\n---\n')
         subprocess.run(['git', 'fetch', 'dashboard'], cwd=repo_dir, timeout=30)
         print('\n---\n')
-        subprocess.run(['git', 'checkout', f'dashboard/{new_branch}', '-b', f'{new_branch}'], cwd=repo_dir, timeout=30)
+        subprocess.run(['git', 'checkout', f'dashboard/{new_branch}', '-B', f'{new_branch}'], cwd=repo_dir, timeout=30)
         print('\n---\n')
         print(f"Updated repo at {repo_dir} to branch {new_branch} with remote {new_remote}")
     except Exception as e:
@@ -62,13 +63,13 @@ def on_connect(client, userdata, flags, rc):
     print(f"Connected to MQTT broker with result code {str(rc)}\n")
 
     for ws in ["robot_ws", "research_ws"]:
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/updates/{ws}/remote")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/updates/{ws}/branch")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/updates/{ws}/date")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/updates/{ws}/time")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/updates/{ws}/token")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/status/{ws}")
-        client.subscribe(f"{MQTT_BROKER_NS}/{MANUFACTURER}/{SERIAL_NUMBER}/dashboard/workspaces/{ws}/git_status")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/updates/{ws}/remote")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/updates/{ws}/branch")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/updates/{ws}/date")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/updates/{ws}/time")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/updates/{ws}/token")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/status/{ws}")
+        client.subscribe(f"{MQTT_BROKER_NS}/{ROBOT_MANUFACTURER}/{ROBOT_SERIAL_NUMBER}/dashboard/workspaces/{ws}/git_status")
 
 
 def on_message(client, userdata, msg):
