@@ -47,7 +47,8 @@ class MQTTPublisher:
     def publish(self, topic, message):
         full_topic = f"{self.namespace}{topic}"
         self.client.publish(full_topic, message)
-        print(f"Published to {full_topic}: {message}")
+        print(f"Published: {message}")
+        #print(f"Published to {full_topic}: {message}")
 
 # Worker thread for running actions repeatedly
 def action_worker(repo_name, action_name, repo_config, action_config, publisher, manufacturer, robot_name, topic_group):

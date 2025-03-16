@@ -2,23 +2,19 @@
 workspace_dashboard:
     robot_ws:  # Robot WS
         actions: [git_status, git_branch]
-        dir: /home/james/ros2_ws/src/environment_template
+        dir: /home/agilex/limo_platform
     research_ws:  # Research WS
         actions: [git_status, git_branch, git_remote]
-        dir: /home/james/ros2_ws/src/ply_publisher
+        dir: /home/agilex/limo_ros2
     meta:
         actions: [robot_name, battery, last_online]
 
 
 # Secondary Publishers
 repositories:
-    environment_template:
+    fleet_status_dashboard:
         actions: [git_status, git_branch]
-        dir: /home/james/ros2_ws/src/environment_template
-    ply_publisher:
-        actions: [git_status, git_branch]
-        dir: /home/james/ros2_ws/src/ply_publisher
-
+        dir: /home/agilex/fleet_status_dashboard
 
 actions:
     git_status:

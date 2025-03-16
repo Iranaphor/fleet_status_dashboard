@@ -9,6 +9,28 @@ import subprocess
 import paho.mqtt.client as mqtt
 
 
+def sp(command, repo_dir):
+    try:
+        result = subprocess.run(
+            command,
+            cwd=repo_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            timeout=30
+        )
+    except Exception as e:
+        result = subprocess.run(
+            command,
+            cwd=repo_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=30
+        )
+
+    result.stdout = str(result.stdout.decode("utf-8"))
+    return result
+
 def git_status(repo_config):
     """
     Run 'git status' in the specified repo directory.
@@ -16,21 +38,16 @@ def git_status(repo_config):
     """
     repo_dir = repo_config.get('dir')
     try:
-        result = subprocess.run(
-            ['git', 'status'],
-            cwd=repo_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=30
-        )
+        result = sp(['git', 'status'], repo_dir)
         if result.returncode == 0:
-            result = result.stdout.strip()
+            result = str(result.stdout.strip())
 
             # Check which line is relevent
             if 'Your branch is ahead' in result:
                 return 'ahead'
             elif 'Your branch is up-to-date' in result:
+                return 'up-to-date'
+            elif 'Your branch is up to date' in result:
                 return 'up-to-date'
             return result
 
@@ -47,14 +64,7 @@ def git_branch(repo_config):
     """
     repo_dir = repo_config.get('dir')
     try:
-        result = subprocess.run(
-            ['git', 'branch'],
-            cwd=repo_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=30
-        )
+        result = sp(['git', 'branch'], repo_dir)
         if result.returncode == 0:
 
             result = result.stdout.strip()
@@ -75,14 +85,7 @@ def git_remote_name(repo_config):
     """
     repo_dir = repo_config.get('dir')
     try:
-        result = subprocess.run(
-            ['git', 'status'],
-            cwd=repo_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=30
-        )
+        result = sp(['git', 'status'], repo_dir)
         if result.returncode == 0:
             result = result.stdout.strip()
 
@@ -104,19 +107,12 @@ def git_remote(repo_config):
     repo_dir = repo_config.get('dir')
     try:
         remote_name = git_remote_name(repo_config)
-        result = subprocess.run(
-            ['git', 'remote', '-v'],
-            cwd=repo_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-            timeout=30
-        )
+        result = sp(['git', 'remote', '-v'], repo_dir)
         if result.returncode == 0:
 
             result = result.stdout.strip()
             result = [r for r in result.split('\n') if 'fetch' in r and remote_name in r][0]
-            result = result.split('http')[0].strip()
+            result = result.split('\t')[1].strip()
             return result
 
         else:
@@ -131,8 +127,10 @@ def robot_name(repo_config):
     robot_name = os.getenv('ROBOT_NAME', 'default_robot')
     return robot_name
 
+
 def battery(repo_config):
     return ''
+
 
 def last_online(repo_config):
     now = datetime.datetime.now()
