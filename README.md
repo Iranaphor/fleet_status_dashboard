@@ -1,5 +1,21 @@
-# Installation and Setup
-Requires python3 and paho-mqtt
+# Installation and Setup Processes
+Requires python3 and pip install paho-mqtt
+
+Setup to autorun as follows:
+```sh
+cd setup
+. setup.sh
+nano $HOME/.profile
+```
+
+Edit the `.profile` file to add the environment variables.
+
+# Uninstall Process
+follow the below to uninstall the setup:
+```sh
+cd setup
+. uninstall.sh
+```
 
 ## Environment Variables:
 The following environment variables must be set:
