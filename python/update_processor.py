@@ -9,7 +9,7 @@ import subprocess
 import paho.mqtt.client as mqtt
 
 # Path to configuration file
-CONFIG_FILE = './config.yaml'
+CONFIG_FILE = os.getenv('MRS_FLEET_DASHBOARD_CONFIG_PATH')
 
 # Retrieve manufacturer and serial number from environment variables
 ROBOT_MANUFACTURER = os.getenv("ROBOT_MANUFACTURER")

@@ -14,6 +14,19 @@ AUTOSTART_FILE="$AUTOSTART_DIR/myscript.desktop"
 # Ensure the directory exists
 mkdir -p "$AUTOSTART_DIR"
 
+# Install required Python modules
+echo "Checking for required Python modules..."
+REQUIRED_PKGS=("paho-mqtt")
+
+for pkg in "${REQUIRED_PKGS[@]}"; do
+    if ! python3 -c "import $pkg" 2>/dev/null; then
+        echo "Installing missing package: $pkg"
+        pip3 install --user $pkg
+    else
+        echo "Package $pkg is already installed."
+    fi
+done
+
 # Write the .desktop file content
 cat <<EOF > "$AUTOSTART_FILE"
 [Desktop Entry]
@@ -36,6 +49,7 @@ echo "Your Python scripts ($SCRIPT1_PATH and $SCRIPT2_PATH) will now run after t
 
 # Define the profile file
 PROFILE_FILE="$HOME/.profile"
+CONFIG_FILE="$(realpath "$SCRIPT_DIR/../python/config.yaml")"
 
 # Define environment variables
 ENV_VARS=(
@@ -45,6 +59,7 @@ ENV_VARS=(
     "export MQTT_BROKER_IP="
     "export MQTT_BROKER_PORT="
     "export MQTT_BROKER_NS="
+    "export MRS_FLEET_DASHBOARD_CONFIG_PATH=${CONFIG_FILE}"
 )
 
 # Append environment variables to .profile if they are not already present

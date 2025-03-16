@@ -10,7 +10,7 @@ import paho.mqtt.client as mqtt
 from actions import git_status, git_branch, git_remote, robot_name, battery, last_online
 
 # Read configuration from a YAML file
-CONFIG_FILE = './config.yaml'  # adjust the path as needed
+CONFIG_FILE = os.environ.get('MRS_FLEET_DASHBOARD_CONFIG_PATH')
 
 def load_config(config_file):
     with open(config_file, 'r') as f:

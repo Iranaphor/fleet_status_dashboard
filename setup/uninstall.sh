@@ -15,6 +15,7 @@ ENV_VARS=(
     "export MQTT_BROKER_IP="
     "export MQTT_BROKER_PORT="
     "export MQTT_BROKER_NS="
+    "export MRS_FLEET_DASHBOARD_CONFIG_PATH="
 )
 
 # Remove the autostart file
