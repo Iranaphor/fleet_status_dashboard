@@ -46,7 +46,7 @@ class MQTTPublisher:
 
     def publish(self, topic, message):
         full_topic = f"{self.namespace}{topic}"
-        self.client.publish(full_topic, message)
+        self.client.publish(full_topic, message, retain=True)
         print(f"Published: {message}")
         #print(f"Published to {full_topic}: {message}")
 
