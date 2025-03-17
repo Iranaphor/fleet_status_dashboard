@@ -1,3 +1,4 @@
+cd dashboard
 
 ################################
 # Install nodejs and npm
@@ -22,13 +23,13 @@ sudo npm install tabulator-tables --save
 
 ################################
 # Launch node-red
-node-red
+#node-red
 
 
 #################################
 # Uninstall nodejs and npm
-sudo apt remove -y nodejs npm libnode-dev
-sudo apt autoremove -y
-sudo apt clean
-sudo dpkg --remove --force-all libnode-dev
-sudo apt remove -y nodejs npm
+#sudo apt remove -y nodejs npm libnode-dev
+#sudo apt autoremove -y
+#sudo apt clean
+#sudo dpkg --remove --force-all libnode-dev
+#sudo apt remove -y nodejs npm
