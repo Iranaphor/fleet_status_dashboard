@@ -10,6 +10,17 @@ nano $HOME/.profile
 
 Edit the `.profile` file to add the environment variables.
 
+
+# Launch the Dashboard
+To launch the dashboard cd into the node-red directory, then use:
+```sh
+. launch.sh
+```
+
+Access the dashboard workspace on: `http://localhost:1881`
+
+Access the dashboard UI on: `http://localhost:1881/ui`
+
 # Uninstall Process
 follow the below to uninstall the setup:
 ```sh
