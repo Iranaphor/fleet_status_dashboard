@@ -7,7 +7,7 @@ import threading
 import subprocess
 import paho.mqtt.client as mqtt
 
-from actions import git_status, git_branch, git_remote, robot_name, battery, last_online
+from actions import git_status, git_branch, git_remote, robot_name, battery, last_online, ssid, ip
 
 # Read configuration from a YAML file
 CONFIG_FILE = os.environ.get('MRS_FLEET_DASHBOARD_CONFIG_PATH')
@@ -23,7 +23,9 @@ ACTION_FUNCTIONS = {
     'git_remote': git_remote,
     'robot_name': robot_name,
     'battery': battery,
-    'last_online': last_online
+    'last_online': last_online,
+    'ssid': ssid,
+    'ip': ip
 }
 
 # MQTT Publisher

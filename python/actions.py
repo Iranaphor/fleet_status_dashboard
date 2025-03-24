@@ -134,8 +134,6 @@ def git_remote(repo_config):
         return f"Exception: {str(e)}"
 
 
-
-
 def robot_name(repo_config):
     robot_name = os.getenv('ROBOT_NAME', 'default_robot')
     return robot_name
@@ -148,3 +146,21 @@ def battery(repo_config):
 def last_online(repo_config):
     now = datetime.datetime.now()
     return now.strftime("%d-%b-%Y %H:%M")
+
+
+def ssid(repo_config):
+    result = sp(['iwgetid', '-r'], repo_config)
+    if result.returncode == 0:
+        ssid = result.stdout.strip()
+        return ssid
+    return ''
+
+
+def ip(repo_config):
+    result = sp(["hostname", "-I"], repo_config)
+    if result.returncode == 0:
+        ip = result.stdout.strip()
+        ip = ip.split(' ')[0]
+        return ip
+    return ''
+
