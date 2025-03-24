@@ -7,7 +7,7 @@ import threading
 import subprocess
 import paho.mqtt.client as mqtt
 
-from actions import git_status, git_branch, git_remote, robot_name, battery, last_online
+from actions import git_status, git_branch, git_remote, robot_name, battery, last_online, ssid, ip
 
 # Read configuration from a YAML file
 CONFIG_FILE = os.environ.get('MRS_FLEET_DASHBOARD_CONFIG_PATH')
@@ -23,7 +23,9 @@ ACTION_FUNCTIONS = {
     'git_remote': git_remote,
     'robot_name': robot_name,
     'battery': battery,
-    'last_online': last_online
+    'last_online': last_online,
+    'ssid': ssid,
+    'ip': ip
 }
 
 # MQTT Publisher
@@ -79,6 +81,7 @@ def main():
     # Retrieve configuration sections
     robot_ws = config.get('workspace_dashboard', {}).get('robot_ws', {})
     research_ws = config.get('workspace_dashboard', {}).get('research_ws', {})
+    dashboard_ws = config.get('workspace_dashboard', {}).get('dashboard_ws', {})
     meta = config.get('workspace_dashboard', {}).get('meta', {})
 
     # Retrieve other diagnostics
@@ -101,7 +104,7 @@ def main():
 
     # For each workspace, schedule its actions in separate threads
     topic_group = 'dashboard/workspaces'
-    for ws_name, ws_config in [['robot_ws', robot_ws], ['research_ws', research_ws]]:
+    for ws_name, ws_config in [['robot_ws', robot_ws], ['research_ws', research_ws], ['dashboard_ws', dashboard_ws]]:
         ws_actions = ws_config.get('actions', [])
         for action_name in ws_actions:
             action_config = actions.get(action_name, {})
