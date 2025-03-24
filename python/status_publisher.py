@@ -39,10 +39,15 @@ class MQTTPublisher:
             print('running with paho version pre-2.0.0')
             self.client = mqtt.Client('status_publisher')
 
-        # If you need authentication or TLS, configure here
-        self.client.connect(broker_ip, broker_port)
-        # Start a background loop to handle network events
-        self.client.loop_start()
+        while True:
+            try:
+                # If you need authentication or TLS, configure here
+                self.client.connect(broker_ip, broker_port)
+                # Start a background loop to handle network events
+                self.client.loop_start()
+                break
+            except Exception as e:
+                print(str(e))
 
     def publish(self, topic, message):
         full_topic = f"{self.namespace}{topic}"
