@@ -122,8 +122,18 @@ def main():
     #broker_port = config.get("publish", {}).get("mqtt", {}).get("broker_port", 1883)
     broker_ip = MQTT_BROKER_IP
     broker_port = MQTT_BROKER_PORT
-    client.connect(broker_ip, broker_port, 60)
-    client.loop_forever()
+
+    while True:
+        try:
+            # If you need authentication or TLS, configure here
+            client.connect(broker_ip, broker_port, 60)
+            # Start a background loop to handle network events
+            client.loop_start()
+            break
+        except Exception as e:
+            print(str(e))
+
+
 
 if __name__ == '__main__':
     main()
