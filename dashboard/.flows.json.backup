@@ -42,7 +42,7 @@
         "id": "27a07c504a25bef3",
         "type": "ui_tab",
         "name": "Research WS Form",
-        "icon": "dashboard",
+        "icon": "fa-graduation-cap",
         "order": 4,
         "disabled": false,
         "hidden": false
@@ -51,10 +51,10 @@
         "id": "403a1a7c6bba8af2",
         "type": "ui_base",
         "theme": {
-            "name": "theme-light",
+            "name": "theme-custom",
             "lightTheme": {
                 "default": "#0094CE",
-                "baseColor": "#0094CE",
+                "baseColor": "#575757",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -67,52 +67,53 @@
                 "reset": false
             },
             "customTheme": {
-                "name": "Untitled Theme 1",
+                "name": "GREEN",
                 "default": "#4B7930",
-                "baseColor": "#4B7930",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                "baseColor": "#ededed",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
             },
             "themeState": {
                 "base-color": {
-                    "default": "#0094CE",
-                    "value": "#0094CE",
-                    "edited": false
+                    "default": "#4B7930",
+                    "value": "#ededed",
+                    "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#0094CE",
-                    "edited": false
+                    "value": "#2e8a56",
+                    "edited": true
                 },
                 "page-backgroundColor": {
-                    "value": "#fafafa",
-                    "edited": false
+                    "value": "#ffffff",
+                    "edited": true
                 },
                 "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#d1d1d1",
+                    "edited": true
                 },
                 "group-textColor": {
-                    "value": "#1bbfff",
-                    "edited": false
+                    "value": "#000000",
+                    "edited": true
                 },
                 "group-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#616161",
+                    "edited": true
                 },
                 "group-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#dbdbdb",
+                    "edited": true
                 },
                 "widget-textColor": {
-                    "value": "#111111",
-                    "edited": false
+                    "value": "#000000",
+                    "edited": true
                 },
                 "widget-backgroundColor": {
-                    "value": "#0094ce",
-                    "edited": false
+                    "value": "#2e8a56",
+                    "edited": true
                 },
                 "widget-borderColor": {
-                    "value": "#ffffff",
-                    "edited": false
+                    "value": "#c4c4c4",
+                    "edited": true
                 },
                 "base-font": {
                     "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
@@ -127,21 +128,21 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "Fleet Management Dashboard",
             "hideToolbar": "false",
             "allowSwipe": "false",
-            "lockMenu": "false",
+            "lockMenu": "icon",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
                 "sx": 48,
                 "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
+                "gx": 0,
+                "gy": 0,
+                "cx": 2,
+                "cy": 0,
+                "px": 20,
+                "py": 20
             }
         }
     },
@@ -157,17 +158,6 @@
         "className": ""
     },
     {
-        "id": "87c41f4ea777e050",
-        "type": "ui_group",
-        "name": "Form",
-        "tab": "be573db05f70ced9",
-        "order": 2,
-        "disp": true,
-        "width": "35",
-        "collapse": true,
-        "className": ""
-    },
-    {
         "id": "a7f52d91f67fcff8",
         "type": "ui_group",
         "name": "Form",
@@ -176,18 +166,6 @@
         "disp": true,
         "width": "35",
         "collapse": true,
-        "className": ""
-    },
-    {
-        "id": "1be3c1d3644e7083",
-        "type": "ui_group",
-        "d": true,
-        "name": "Actions",
-        "tab": "57f6a300f26985f5",
-        "order": 2,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
         "className": ""
     },
     {
@@ -275,7 +253,7 @@
         "id": "68b9f9a54b5643dd",
         "type": "ui_tab",
         "name": "Full Dashboard",
-        "icon": "dashboard",
+        "icon": "fa-table",
         "order": 2,
         "disabled": false,
         "hidden": false
@@ -295,7 +273,7 @@
         "id": "be573db05f70ced9",
         "type": "ui_tab",
         "name": "Robot WS Form",
-        "icon": "dashboard",
+        "icon": "fa-android",
         "order": 3,
         "disabled": false,
         "hidden": false
@@ -303,7 +281,7 @@
     {
         "id": "5bc9e89c949c3ebb",
         "type": "ui_group",
-        "name": "Table",
+        "name": "Fleet Status Overview",
         "tab": "be573db05f70ced9",
         "order": 1,
         "disp": true,
@@ -315,7 +293,7 @@
         "id": "8056db6eaee640c6",
         "type": "ui_tab",
         "name": "Command Form",
-        "icon": "dashboard",
+        "icon": "fa-terminal",
         "order": 5,
         "disabled": false,
         "hidden": false
@@ -335,7 +313,7 @@
         "id": "8b28850125138875",
         "type": "ui_tab",
         "name": "Dashboard WS Form",
-        "icon": "dashboard",
+        "icon": "fa-cloud-download ",
         "order": 6,
         "disabled": false,
         "hidden": false
@@ -377,6 +355,7 @@
         "id": "023cab4af90cbcf5",
         "type": "ui_spacer",
         "z": "74f9e71cad0b485a",
+        "d": true,
         "name": "spacer",
         "group": "ddc248bb9c67f143",
         "order": 1,
@@ -387,9 +366,10 @@
         "id": "664791514c502ff1",
         "type": "ui_spacer",
         "z": "74f9e71cad0b485a",
+        "d": true,
         "name": "spacer",
         "group": "5bc9e89c949c3ebb",
-        "order": 1,
+        "order": 2,
         "width": "1",
         "height": "6"
     },
@@ -400,8 +380,8 @@
         "name": "spacer",
         "group": "9f7e46cb54397403",
         "order": 1,
-        "width": "33",
-        "height": "5"
+        "width": "1",
+        "height": "6"
     },
     {
         "id": "1ebee16746b75711",
@@ -412,6 +392,68 @@
         "order": 1,
         "width": "1",
         "height": "6"
+    },
+    {
+        "id": "87c41f4ea777e050",
+        "type": "ui_group",
+        "name": "Update Robot-Base Workspace",
+        "tab": "be573db05f70ced9",
+        "order": 2,
+        "disp": true,
+        "width": "35",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1be3c1d3644e7083",
+        "type": "ui_group",
+        "d": true,
+        "name": "Actions",
+        "tab": "57f6a300f26985f5",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "17dfe530211daf97",
+        "type": "JsonWebToken_config",
+        "name": "bobby",
+        "secret": "pass"
+    },
+    {
+        "id": "df9927ad0310b663",
+        "type": "ui_group",
+        "name": "login",
+        "tab": "27a07c504a25bef3",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "479f4356fd74aab2",
+        "type": "ui_spacer",
+        "z": "74f9e71cad0b485a",
+        "d": true,
+        "name": "spacer",
+        "group": "87c41f4ea777e050",
+        "order": 2,
+        "width": "1",
+        "height": "3"
+    },
+    {
+        "id": "f7a9c07da7277dde",
+        "type": "ui_spacer",
+        "z": "74f9e71cad0b485a",
+        "d": true,
+        "name": "spacer",
+        "group": "87c41f4ea777e050",
+        "order": 4,
+        "width": "35",
+        "height": "1"
     },
     {
         "id": "1c23356fa3270b15",
@@ -462,9 +504,9 @@
         "z": "74f9e71cad0b485a",
         "group": "5bc9e89c949c3ebb",
         "name": "Status Table",
-        "order": 2,
+        "order": 3,
         "width": "33",
-        "height": "5",
+        "height": "10",
         "columns": [
             {
                 "field": "selected",
@@ -579,7 +621,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 850,
+        "x": 910,
         "y": 200,
         "wires": [
             [
@@ -687,7 +729,7 @@
         "name": "",
         "group": "ddc248bb9c67f143",
         "order": 3,
-        "width": "30",
+        "width": "4",
         "height": "1",
         "passthru": false,
         "label": "Clear Table",
@@ -700,7 +742,7 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 310,
+        "x": 290,
         "y": 220,
         "wires": [
             [
@@ -732,8 +774,8 @@
         "name": "Update Robot Workspace",
         "label": "",
         "group": "87c41f4ea777e050",
-        "order": 8,
-        "width": "25",
+        "order": 3,
+        "width": "33",
         "height": "6",
         "options": [
             {
@@ -786,7 +828,7 @@
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 690,
+        "x": 230,
         "y": 540,
         "wires": [
             [
@@ -807,7 +849,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
+        "x": 530,
         "y": 540,
         "wires": [
             [
@@ -829,7 +871,7 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 1210,
+        "x": 750,
         "y": 540,
         "wires": []
     },
@@ -846,7 +888,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 480,
         "y": 500,
         "wires": []
     },
@@ -858,7 +900,7 @@
         "label": "",
         "group": "a7f52d91f67fcff8",
         "order": 8,
-        "width": "25",
+        "width": "35",
         "height": "6",
         "options": [
             {
@@ -911,8 +953,8 @@
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 700,
-        "y": 660,
+        "x": 240,
+        "y": 620,
         "wires": [
             [
                 "be3ce65dd88a5bc0",
@@ -932,8 +974,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 660,
+        "x": 530,
+        "y": 620,
         "wires": [
             [
                 "2ae68555841e65a8"
@@ -954,8 +996,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 1210,
-        "y": 660,
+        "x": 750,
+        "y": 620,
         "wires": []
     },
     {
@@ -971,8 +1013,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 620,
+        "x": 480,
+        "y": 580,
         "wires": []
     },
     {
@@ -983,7 +1025,7 @@
         "label": "",
         "group": "b7a68b9898db523f",
         "order": 8,
-        "width": "9",
+        "width": "35",
         "height": "3",
         "options": [
             {
@@ -1012,8 +1054,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 650,
-        "y": 780,
+        "x": 190,
+        "y": 700,
         "wires": [
             [
                 "c1954bb2815db530",
@@ -1033,8 +1075,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 780,
+        "x": 530,
+        "y": 700,
         "wires": [
             [
                 "c42d8eb44093a8a8"
@@ -1055,8 +1097,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 1210,
-        "y": 780,
+        "x": 750,
+        "y": 700,
         "wires": []
     },
     {
@@ -1072,8 +1114,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 740,
+        "x": 480,
+        "y": 660,
         "wires": []
     },
     {
@@ -1084,7 +1126,7 @@
         "label": "",
         "group": "6b3dd49f3efda1e9",
         "order": 8,
-        "width": "16",
+        "width": "35",
         "height": "3",
         "options": [
             {
@@ -1105,8 +1147,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 660,
-        "y": 900,
+        "x": 200,
+        "y": 780,
         "wires": [
             [
                 "397cadc00c1f0057",
@@ -1126,8 +1168,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 990,
-        "y": 900,
+        "x": 530,
+        "y": 780,
         "wires": [
             [
                 "0da68d9a718f967f"
@@ -1148,8 +1190,8 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 1210,
-        "y": 900,
+        "x": 750,
+        "y": 780,
         "wires": []
     },
     {
@@ -1165,666 +1207,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "5b674abe75e8109b",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "enable_robot_ws",
-        "func": "// Example condition: Enable the button if the input payload is 'enable'\nif (msg.payload === \"robot_ws\") {\n    msg.enabled = true;\n} else {\n    msg.enabled = false;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 990,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f80bf027ea7e55b8",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "enable_research_ws",
-        "func": "// Example condition: Enable the button if the input payload is 'enable'\nif (msg.payload === \"research_ws\") {\n    msg.enabled = true;\n} else {\n    msg.enabled = false;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7867f75bdf4277e2",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "enable_pull_dashboard",
-        "func": "// Example condition: Enable the button if the input payload is 'enable'\nif (msg.payload === \"pull_dashboard\") {\n    msg.enabled = true;\n} else {\n    msg.enabled = false;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "189313b6955112d6",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "enable_send_command",
-        "func": "// Example condition: Enable the button if the input payload is 'enable'\nif (msg.payload === \"send_command\") {\n    msg.enabled = true;\n} else {\n    msg.enabled = false;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1010,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b63b835f08aa4e58",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "enable_robot_ws",
-        "func": "if (msg.payload === \"robot_ws\") {\n    msg.ui_control = {\n        groups: {\n            \"Robot WS Group\": { hidden: false },\n            \"Research WS Group\": { hidden: true }\n        }\n    };\n} else if (msg.payload === \"research_ws\") {\n    msg.ui_control = {\n        groups: {\n            \"Robot WS Group\": { hidden: true },\n            \"Research WS Group\": { hidden: false }\n        }\n    };\n}\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 170,
-        "y": 780,
-        "wires": [
-            [
-                "5f56dfaaea5f9c5e",
-                "bb257bdf301994c9"
-            ]
-        ]
-    },
-    {
-        "id": "5f56dfaaea5f9c5e",
-        "type": "ui_ui_control",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "events": "all",
-        "x": 400,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bb257bdf301994c9",
-        "type": "debug",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
+        "x": 480,
         "y": 740,
-        "wires": []
-    },
-    {
-        "id": "6aaef2e157170db2",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "robot_ws_btn",
-        "group": "1be3c1d3644e7083",
-        "order": 1,
-        "width": "3",
-        "height": "2",
-        "passthru": false,
-        "label": "Robot WS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 800,
-        "y": 1040,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7775dcb01153e5da",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "research_ws_btn",
-        "group": "1be3c1d3644e7083",
-        "order": 2,
-        "width": "3",
-        "height": "2",
-        "passthru": false,
-        "label": "Research WS",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 790,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bdb5418090eafe30",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "mfd_btn",
-        "group": "1be3c1d3644e7083",
-        "order": 3,
-        "width": "3",
-        "height": "2",
-        "passthru": false,
-        "label": "Pull Dashboard",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 820,
-        "y": 1120,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d3e1a6ee020d4cc6",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "send_command_btn",
-        "group": "1be3c1d3644e7083",
-        "order": 8,
-        "width": "3",
-        "height": "2",
-        "passthru": false,
-        "label": "Send Command",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 780,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "540e0890bc1935c2",
-        "type": "ui_multistate_switch",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "group": "1be3c1d3644e7083",
-        "order": 5,
-        "width": "20",
-        "height": "2",
-        "label": "",
-        "stateField": "payload",
-        "enableField": "enable",
-        "passthroughField": "passthrough",
-        "inputMsgField": "inputmsg",
-        "rounded": false,
-        "useThemeColors": true,
-        "hideSelectedLabel": false,
-        "multilineLabel": false,
-        "passThrough": "never",
-        "inputMsg": "none",
-        "userInput": "enabled_show",
-        "options": [
-            {
-                "label": "Configure Robot Workspace",
-                "value": "robot_ws",
-                "valueType": "str",
-                "color": "#009933"
-            },
-            {
-                "label": "Configure Research Workspace",
-                "value": "research_ws",
-                "valueType": "str",
-                "color": "#999999"
-            },
-            {
-                "label": "Update Fleet Dashboard",
-                "value": "pull_dashboard",
-                "valueType": "str",
-                "color": "#ff6666"
-            },
-            {
-                "label": "Send Command",
-                "value": "send_command",
-                "valueType": "str",
-                "color": "#009999"
-            }
-        ],
-        "topic": "",
-        "x": 280,
-        "y": 1080,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "72c18b853414dc01",
-        "type": "ui_ui_control",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "events": "all",
-        "x": 1140,
-        "y": 1480,
-        "wires": [
-            [
-                "64a80d1d1865b6f2"
-            ]
-        ]
-    },
-    {
-        "id": "8857aa157170356c",
-        "type": "change",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Function\"]}}",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 1440,
-        "wires": [
-            [
-                "72c18b853414dc01",
-                "732a3e9cd5526fea"
-            ]
-        ]
-    },
-    {
-        "id": "15282ebaddd9c238",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "group": "a40734d79c98dc24",
-        "order": 1,
-        "width": "3",
-        "height": "2",
-        "passthru": false,
-        "label": "button",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 630,
-        "y": 1380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c620170d2ba13de7",
-        "type": "ui_dropdown",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "label": "",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "b0937f59c6faf3f4",
-        "order": 1,
-        "width": 4,
-        "height": 4,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Show",
-                "value": true,
-                "type": "bool"
-            },
-            {
-                "label": "Hide",
-                "value": false,
-                "type": "bool"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 640,
-        "y": 1480,
-        "wires": [
-            [
-                "a9592780d2b05e09"
-            ]
-        ]
-    },
-    {
-        "id": "a9592780d2b05e09",
-        "type": "switch",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "true"
-            },
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 770,
-        "y": 1480,
-        "wires": [
-            [
-                "8857aa157170356c"
-            ],
-            [
-                "e47422d6f97d7e7a"
-            ]
-        ]
-    },
-    {
-        "id": "e47422d6f97d7e7a",
-        "type": "change",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"group\":{\"show\":[\"Function\", \"Setting\"]}}",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 960,
-        "y": 1520,
-        "wires": [
-            [
-                "72c18b853414dc01",
-                "581e27a1bb20702c"
-            ]
-        ]
-    },
-    {
-        "id": "64a80d1d1865b6f2",
-        "type": "debug",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "debug 15",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "732a3e9cd5526fea",
-        "type": "debug",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1140,
-        "y": 1440,
-        "wires": []
-    },
-    {
-        "id": "581e27a1bb20702c",
-        "type": "debug",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1140,
-        "y": 1520,
-        "wires": []
-    },
-    {
-        "id": "4b64a433ca7fb104",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "group": "b0937f59c6faf3f4",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "show",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 770,
-        "y": 1440,
-        "wires": [
-            [
-                "8857aa157170356c"
-            ]
-        ]
-    },
-    {
-        "id": "298d697ed10f895a",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "group": "b0937f59c6faf3f4",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "hide",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 770,
-        "y": 1520,
-        "wires": [
-            [
-                "e47422d6f97d7e7a"
-            ]
-        ]
-    },
-    {
-        "id": "f5d4452bd82a301d",
-        "type": "change",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{\"tab\":{\"selected\":[\"Robot/Research Workspaces Tracker\"]}}",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 1680,
-        "wires": [
-            [
-                "b68b652884e3be38",
-                "e6c4184ea528ce42"
-            ]
-        ]
-    },
-    {
-        "id": "b68b652884e3be38",
-        "type": "ui_ui_control",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "events": "change",
-        "x": 840,
-        "y": 1680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "25e302b0e23e044d",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "",
-        "group": "b0937f59c6faf3f4",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "show",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 450,
-        "y": 1680,
-        "wires": [
-            [
-                "f5d4452bd82a301d"
-            ]
-        ]
-    },
-    {
-        "id": "e6c4184ea528ce42",
-        "type": "debug",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 1620,
         "wires": []
     },
     {
@@ -1878,7 +1262,7 @@
         "links": [
             "8bc3dfad47706ba0"
         ],
-        "x": 655,
+        "x": 715,
         "y": 240,
         "wires": [
             [
@@ -1897,8 +1281,8 @@
         "group": "ddc248bb9c67f143",
         "name": "Status Table",
         "order": 2,
-        "width": "33",
-        "height": "5",
+        "width": "35",
+        "height": "18",
         "columns": [
             {
                 "field": "manufacturer",
@@ -2003,7 +1387,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 850,
+        "x": 910,
         "y": 160,
         "wires": [
             []
@@ -2017,7 +1401,7 @@
         "name": "Status Table",
         "order": 2,
         "width": "33",
-        "height": "5",
+        "height": "10",
         "columns": [
             {
                 "field": "selected",
@@ -2132,7 +1516,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 850,
+        "x": 910,
         "y": 240,
         "wires": [
             [
@@ -2148,7 +1532,7 @@
         "name": "Status Table",
         "order": 2,
         "width": "33",
-        "height": "5",
+        "height": "10",
         "columns": [
             {
                 "field": "selected",
@@ -2263,7 +1647,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 850,
+        "x": 910,
         "y": 320,
         "wires": [
             [
@@ -2279,7 +1663,7 @@
         "name": "Status Table",
         "order": 2,
         "width": "33",
-        "height": "5",
+        "height": "10",
         "columns": [
             {
                 "field": "selected",
@@ -2394,12 +1778,191 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 850,
+        "x": 910,
         "y": 280,
         "wires": [
             [
                 "da4812d5446d2934"
             ]
         ]
+    },
+    {
+        "id": "13fe6428fe367839",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "name": "",
+        "group": "5bc9e89c949c3ebb",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 980,
+        "y": 400,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "f7574207e2e38e36",
+        "type": "function",
+        "z": "74f9e71cad0b485a",
+        "name": "Clear selected",
+        "func": "// Retrieve (or initialize) stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Loop through manufacturers\nfor (let manufacturer in fleetData) {\n    // Loop through serial numbers\n    for (let serial in fleetData[manufacturer]) {\n        // Set every entry to selected = false\n        fleetData[manufacturer][serial].selected = false;\n    }\n}\n\n// Store the updated data\nflow.set(\"fleetData\", fleetData);\n\n// Convert to array for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "8bc3dfad47706ba0"
+            ]
+        ]
+    },
+    {
+        "id": "940199a89db81820",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "name": "",
+        "group": "3de19491c2d96cf1",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 980,
+        "y": 440,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "e21511220980e71e",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "name": "",
+        "group": "cffc62065f25e999",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 980,
+        "y": 520,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "1b6cb4c8e1b9e186",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "name": "",
+        "group": "9f7e46cb54397403",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 980,
+        "y": 480,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "230b0d04c3fc672a",
+        "type": "link in",
+        "z": "74f9e71cad0b485a",
+        "name": "link in 2",
+        "links": [
+            "86372449206debc2"
+        ],
+        "x": 345,
+        "y": 260,
+        "wires": [
+            [
+                "f7574207e2e38e36",
+                "0ba4b3e4236e628d"
+            ]
+        ]
+    },
+    {
+        "id": "86372449206debc2",
+        "type": "link out",
+        "z": "74f9e71cad0b485a",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "230b0d04c3fc672a"
+        ],
+        "x": 1125,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0ba4b3e4236e628d",
+        "type": "debug",
+        "z": "74f9e71cad0b485a",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 300,
+        "wires": []
     }
 ]
