@@ -6,6 +6,9 @@ workspace_dashboard:
     research_ws:  # Research WS
         actions: [git_status, git_branch, git_remote]
         dir: /home/agilex/limo_research
+    dashboard_ws:  # Dashboard WS
+        actions: [git_status, git_branch, git_remote]
+        dir: /home/agilex/fleet_status_dashboard
     meta:
         actions: [robot_name, battery, last_online, ssid, ip]
 

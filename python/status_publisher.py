@@ -81,6 +81,7 @@ def main():
     # Retrieve configuration sections
     robot_ws = config.get('workspace_dashboard', {}).get('robot_ws', {})
     research_ws = config.get('workspace_dashboard', {}).get('research_ws', {})
+    dashboard_ws = config.get('workspace_dashboard', {}).get('dashboard_ws', {})
     meta = config.get('workspace_dashboard', {}).get('meta', {})
 
     # Retrieve other diagnostics
@@ -103,7 +104,7 @@ def main():
 
     # For each workspace, schedule its actions in separate threads
     topic_group = 'dashboard/workspaces'
-    for ws_name, ws_config in [['robot_ws', robot_ws], ['research_ws', research_ws]]:
+    for ws_name, ws_config in [['robot_ws', robot_ws], ['research_ws', research_ws], ['dashboard_ws', dashboard_ws]]:
         ws_actions = ws_config.get('actions', [])
         for action_name in ws_actions:
             action_config = actions.get(action_name, {})
