@@ -28,7 +28,10 @@ def sp(command, repo_dir):
             timeout=30
         )
 
-    result.stdout = str(result.stdout.decode("utf-8"))
+    try:
+        result.stdout = str(result.stdout.decode("utf-8"))
+    except:
+        pass
     return result
 
 def git_status(repo_config):
