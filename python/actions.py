@@ -167,3 +167,19 @@ def ip(repo_config):
         return ip
     return ''
 
+def hostname(repo_config):
+    result = sp(["hostname"], repo_config)
+    if result.returncode == 0:
+        ip = result.stdout.strip()
+        ip = ip.split(' ')[0]
+        return ip
+    return ''
+
+def user(repo_config):
+    result = sp(["whoami"], repo_config)
+    if result.returncode == 0:
+        ip = result.stdout.strip()
+        ip = ip.split(' ')[0]
+        return ip
+    return ''
+

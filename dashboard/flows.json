@@ -8,6 +8,129 @@
         "env": []
     },
     {
+        "id": "8c737d03eeb53742",
+        "type": "group",
+        "z": "74f9e71cad0b485a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "dd5e596b9388619d",
+            "67e32e6a6e0bb464",
+            "90bb86db1fda5610",
+            "cf5cdb25f59c4dd0",
+            "df4b4b5dbaa15336",
+            "be3ce65dd88a5bc0",
+            "2ae68555841e65a8",
+            "74e0dc6829d71889",
+            "2f36ddca0efb1b87",
+            "c1954bb2815db530",
+            "c42d8eb44093a8a8",
+            "6f3fc8b9413b54ca",
+            "75b82ca5b7612472",
+            "397cadc00c1f0057",
+            "0da68d9a718f967f",
+            "e0d20763fcb9fec3"
+        ],
+        "x": 54,
+        "y": 359,
+        "w": 732,
+        "h": 362
+    },
+    {
+        "id": "065e8addc2012fa3",
+        "type": "group",
+        "z": "74f9e71cad0b485a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3595bb0fa2704c6b",
+            "6750ecdadbf2dc4e",
+            "0cfe446621403423",
+            "8bc3dfad47706ba0",
+            "fcf6ee8dd005be1d",
+            "a299024319fe4c6d",
+            "6945521eefaf77e0",
+            "f7574207e2e38e36",
+            "1c23356fa3270b15",
+            "9225b179d98ad152",
+            "a49b73a2a75847b3",
+            "230b0d04c3fc672a",
+            "9470163941ca997e",
+            "0ba4b3e4236e628d"
+        ],
+        "x": 54,
+        "y": 19,
+        "w": 792,
+        "h": 322
+    },
+    {
+        "id": "ce1d6c832a043a21",
+        "type": "group",
+        "z": "74f9e71cad0b485a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3f819778fbd57881",
+            "da4812d5446d2934",
+            "8bfa5fe0d1af789b",
+            "b1840e90cc72f393",
+            "491d74570f78fcd8",
+            "da09126c166f9ab3",
+            "8283acf73809cbdb",
+            "31cb5bd00f8ab31c"
+        ],
+        "x": 864,
+        "y": 19,
+        "w": 472,
+        "h": 282
+    },
+    {
+        "id": "542b1219a90acbc7",
+        "type": "group",
+        "z": "74f9e71cad0b485a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "86372449206debc2",
+            "13fe6428fe367839",
+            "940199a89db81820",
+            "e21511220980e71e",
+            "1b6cb4c8e1b9e186"
+        ],
+        "x": 804,
+        "y": 359,
+        "w": 292,
+        "h": 202
+    },
+    {
         "id": "89d704a479c1d238",
         "type": "mqtt-broker",
         "name": "LCAS Broker",
@@ -43,7 +166,7 @@
         "type": "ui_tab",
         "name": "Research WS Form",
         "icon": "fa-graduation-cap",
-        "order": 4,
+        "order": 5,
         "disabled": false,
         "hidden": false
     },
@@ -149,7 +272,7 @@
     {
         "id": "3de19491c2d96cf1",
         "type": "ui_group",
-        "name": "Table",
+        "name": "Research Workspace",
         "tab": "27a07c504a25bef3",
         "order": 1,
         "disp": true,
@@ -169,90 +292,9 @@
         "className": ""
     },
     {
-        "id": "4675a91bb0f30641",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "3de19491c2d96cf1",
-        "order": 1,
-        "width": "1",
-        "height": "6"
-    },
-    {
-        "id": "57f6a300f26985f5",
-        "type": "ui_tab",
-        "name": "Hide_Show",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": true,
-        "hidden": true
-    },
-    {
-        "id": "a40734d79c98dc24",
-        "type": "ui_group",
-        "name": "Function",
-        "tab": "57f6a300f26985f5",
-        "order": 1,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "b0937f59c6faf3f4",
-        "type": "ui_group",
-        "name": "Setting",
-        "tab": "57f6a300f26985f5",
-        "order": 3,
-        "disp": true,
-        "width": 6,
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "cba4d14815b780d6",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "b0937f59c6faf3f4",
-        "order": 2,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "ae84df0a4f3852b4",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "b0937f59c6faf3f4",
-        "order": 3,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "d579155fbbce64ab",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "b0937f59c6faf3f4",
-        "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "bd6ed048b5a38d0d",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "b0937f59c6faf3f4",
-        "order": 5,
-        "width": 2,
-        "height": 1
-    },
-    {
         "id": "68b9f9a54b5643dd",
         "type": "ui_tab",
-        "name": "Full Dashboard",
+        "name": "Repository Table",
         "icon": "fa-table",
         "order": 2,
         "disabled": false,
@@ -261,7 +303,7 @@
     {
         "id": "ddc248bb9c67f143",
         "type": "ui_group",
-        "name": "Fleet Status Overview",
+        "name": "Repository Status Overview",
         "tab": "68b9f9a54b5643dd",
         "order": 1,
         "disp": true,
@@ -272,16 +314,17 @@
     {
         "id": "be573db05f70ced9",
         "type": "ui_tab",
+        "d": true,
         "name": "Robot WS Form",
         "icon": "fa-android",
-        "order": 3,
+        "order": 4,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "5bc9e89c949c3ebb",
         "type": "ui_group",
-        "name": "Fleet Status Overview",
+        "name": "Robot Workspace",
         "tab": "be573db05f70ced9",
         "order": 1,
         "disp": true,
@@ -294,14 +337,14 @@
         "type": "ui_tab",
         "name": "Command Form",
         "icon": "fa-terminal",
-        "order": 5,
+        "order": 6,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "9f7e46cb54397403",
         "type": "ui_group",
-        "name": "Table",
+        "name": "Command Status",
         "tab": "8056db6eaee640c6",
         "order": 1,
         "disp": true,
@@ -314,14 +357,14 @@
         "type": "ui_tab",
         "name": "Dashboard WS Form",
         "icon": "fa-cloud-download ",
-        "order": 6,
+        "order": 7,
         "disabled": false,
         "hidden": false
     },
     {
         "id": "cffc62065f25e999",
         "type": "ui_group",
-        "name": "Table",
+        "name": "Fleet Dashboard",
         "tab": "8b28850125138875",
         "order": 1,
         "disp": true,
@@ -352,84 +395,13 @@
         "className": ""
     },
     {
-        "id": "023cab4af90cbcf5",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "spacer",
-        "group": "ddc248bb9c67f143",
-        "order": 1,
-        "width": "1",
-        "height": "12"
-    },
-    {
-        "id": "664791514c502ff1",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "d": true,
-        "name": "spacer",
-        "group": "5bc9e89c949c3ebb",
-        "order": 2,
-        "width": "1",
-        "height": "6"
-    },
-    {
-        "id": "d74ee42bad15ec54",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "9f7e46cb54397403",
-        "order": 1,
-        "width": "1",
-        "height": "6"
-    },
-    {
-        "id": "1ebee16746b75711",
-        "type": "ui_spacer",
-        "z": "74f9e71cad0b485a",
-        "name": "spacer",
-        "group": "cffc62065f25e999",
-        "order": 1,
-        "width": "1",
-        "height": "6"
-    },
-    {
         "id": "87c41f4ea777e050",
         "type": "ui_group",
-        "name": "Update Robot-Base Workspace",
+        "name": "Form",
         "tab": "be573db05f70ced9",
         "order": 2,
         "disp": true,
         "width": "35",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "1be3c1d3644e7083",
-        "type": "ui_group",
-        "d": true,
-        "name": "Actions",
-        "tab": "57f6a300f26985f5",
-        "order": 2,
-        "disp": true,
-        "width": "20",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "17dfe530211daf97",
-        "type": "JsonWebToken_config",
-        "name": "bobby",
-        "secret": "pass"
-    },
-    {
-        "id": "df9927ad0310b663",
-        "type": "ui_group",
-        "name": "login",
-        "tab": "27a07c504a25bef3",
-        "order": 3,
-        "disp": true,
-        "width": 6,
         "collapse": false,
         "className": ""
     },
@@ -456,9 +428,30 @@
         "height": "1"
     },
     {
+        "id": "1e61542ee3c5a036",
+        "type": "ui_tab",
+        "name": "Network Table",
+        "icon": "fa-wifi",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "704f30af4820718b",
+        "type": "ui_group",
+        "name": "Network Status Overview",
+        "tab": "1e61542ee3c5a036",
+        "order": 1,
+        "disp": true,
+        "width": "35",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "1c23356fa3270b15",
         "type": "mqtt in",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "",
         "topic": "mrs_fleet_dashboard/#",
         "qos": "0",
@@ -481,8 +474,9 @@
         "id": "a299024319fe4c6d",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "Format data into fleetData",
-        "func": "// Extract topic and payload\nlet topicParts = msg.topic.split(\"/\");  // Split topic into an array\nlet value = msg.payload;  // Get the new value\n\n// Ensure topic structure is correct (at least 6 parts for workspaces)\nif (topicParts.length < 5) {\n    node.warn(\"Invalid topic structure: \" + msg.topic);\n    return null;\n}\n\n// Extract manufacturer, serial number, section, and workspace\nlet manufacturer = topicParts[1];  // \"default_manufacturer\"\nlet serial = topicParts[2];  // \"default_serial_number\"\n\n// Retrieve or initialize stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Ensure manufacturer exists\nif (!fleetData[manufacturer]) {\n    fleetData[manufacturer] = {};\n}\n\n// Ensure serial number exists\nif (!fleetData[manufacturer][serial]) {\n    fleetData[manufacturer][serial] = {\n        manufacturer: manufacturer,\n        serial: serial,\n        robot_name: \"\",\n        \"robot_ws/branch\": \"\",\n        \"robot_ws/status\": \"\",\n        \"research_ws/remote\": \"\",\n        \"research_ws/branch\": \"\",\n        \"research_ws/status\": \"\",\n        battery: \"\",\n        last_online: \"\",\n        selected: false\n    };\n    node.warn(`New robot with uuid of [${serial}] by [${manufacturer}]`);\n}\n\n// Update the correct field based on topic\nlet b_prefix = \"<span style='color: blue; font - weight: bold;'>\"\nlet r_prefix = \"<span style='color: green; font - weight: bold;'>\"\nlet suffix = \"</span>\"\n\nif (topicParts[3] === \"dashboard\") {\n    if (topicParts[4] === \"meta\") {\n        if (topicParts[5] === \"robot_name\") fleetData[manufacturer][serial].robot_name = value;\n        if (topicParts[5] === \"last_online\") fleetData[manufacturer][serial].last_online = value;\n        if (topicParts[5] === \"battery\") fleetData[manufacturer][serial].battery = JSON.stringify(value);\n    } else if (topicParts[4] === \"workspaces\") {\n        if (topicParts[5] === \"robot_ws\") {\n            if (topicParts[6] === \"git_branch\") fleetData[manufacturer][serial][\"robot_ws/branch\"] = b_prefix + value + suffix;\n            if (topicParts[6] === \"git_status\") fleetData[manufacturer][serial][\"robot_ws/status\"] = b_prefix + value + suffix;\n        }\n        if (topicParts[5] === \"research_ws\") {\n            if (topicParts[6] === \"git_branch\") fleetData[manufacturer][serial][\"research_ws/branch\"] = r_prefix + value + suffix;\n            if (topicParts[6] === \"git_status\") fleetData[manufacturer][serial][\"research_ws/status\"] = r_prefix + value + suffix;\n            if (topicParts[6] === \"git_remote\") fleetData[manufacturer][serial][\"research_ws/remote\"] = r_prefix + value + suffix;\n        }\n    }\n}\n\n// Store the updated data persistently\nflow.set(\"fleetData\", fleetData);\n\n// Convert stored data to array format for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;\n",
+        "func": "// Extract topic and payload\nlet topicParts = msg.topic.split(\"/\");  // Split topic into an array\nlet value = msg.payload;  // Get the new value\n\n// Ensure topic structure is correct (at least 6 parts for workspaces)\nif (topicParts.length < 5) {\n    node.warn(\"Invalid topic structure: \" + msg.topic);\n    return null;\n}\n\n// Extract manufacturer, serial number, section, and workspace\nlet manufacturer = topicParts[1];  // \"default_manufacturer\"\nlet serial = topicParts[2];  // \"default_serial_number\"\n\n// Retrieve or initialize stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Ensure manufacturer exists\nif (!fleetData[manufacturer]) {\n    fleetData[manufacturer] = {};\n}\n\n// Ensure serial number exists\nif (!fleetData[manufacturer][serial]) {\n    fleetData[manufacturer][serial] = {\n        manufacturer: manufacturer,\n        serial: serial,\n        robot_name: \"\",\n        \"robot_ws/branch\": \"\",\n        \"robot_ws/status\": \"\",\n        \"research_ws/remote\": \"\",\n        \"research_ws/branch\": \"\",\n        \"research_ws/status\": \"\",\n        \"dashboard_ws/remote\": \"\",\n        \"dashboard_ws/branch\": \"\",\n        \"dashboard_ws/status\": \"\",\n        battery: \"\",\n        last_online: \"\",\n        ssid: \"\",\n        ip: \"\",\n        hostname: \"\",\n        user: \"\",\n        selected: false\n    };\n    node.warn(`New robot with uuid of [${serial}] by [${manufacturer}]`);\n}\n\n// Update the correct field based on topic\nlet b_prefix = \"<span style='color: blue; font - weight: bold;'>\"\nlet r_prefix = \"<span style='color: green; font - weight: bold;'>\"\nlet d_prefix = \"<span style='color: red; font - weight: bold;'>\"\nlet suffix = \"</span>\"\n\nif (topicParts[3] === \"dashboard\") {\n    if (topicParts[4] === \"meta\") {\n        if (topicParts[5] === \"robot_name\") fleetData[manufacturer][serial].robot_name = value;\n        if (topicParts[5] === \"last_online\") fleetData[manufacturer][serial].last_online = value;\n        if (topicParts[5] === \"battery\") fleetData[manufacturer][serial].battery = value;\n        if (topicParts[5] === \"ssid\") fleetData[manufacturer][serial].ssid = value;\n        if (topicParts[5] === \"ip\") fleetData[manufacturer][serial].ip = value;\n        if (topicParts[5] === \"hostname\") fleetData[manufacturer][serial].hostname = value;\n        if (topicParts[5] === \"user\") fleetData[manufacturer][serial].user = value;\n    } else if (topicParts[4] === \"workspaces\") {\n        if (topicParts[5] === \"robot_ws\") {\n            if (topicParts[6] === \"git_branch\") fleetData[manufacturer][serial][\"robot_ws/branch\"] = b_prefix + value + suffix;\n            if (topicParts[6] === \"git_status\") fleetData[manufacturer][serial][\"robot_ws/status\"] = b_prefix + value + suffix;\n        }\n        if (topicParts[5] === \"research_ws\") {\n            if (topicParts[6] === \"git_branch\") fleetData[manufacturer][serial][\"research_ws/branch\"] = r_prefix + value + suffix;\n            if (topicParts[6] === \"git_status\") fleetData[manufacturer][serial][\"research_ws/status\"] = r_prefix + value + suffix;\n            if (topicParts[6] === \"git_remote\") fleetData[manufacturer][serial][\"research_ws/remote\"] = r_prefix + value + suffix;\n        }\n        if (topicParts[5] === \"dashboard_ws\") {\n            if (topicParts[6] === \"git_branch\") fleetData[manufacturer][serial][\"dashboard_ws/branch\"] = d_prefix + value + suffix;\n            if (topicParts[6] === \"git_status\") fleetData[manufacturer][serial][\"dashboard_ws/status\"] = d_prefix + value + suffix;\n            if (topicParts[6] === \"git_remote\") fleetData[manufacturer][serial][\"dashboard_ws/remote\"] = d_prefix + value + suffix;\n        }\n    }\n}\n\n// Store the updated data persistently\nflow.set(\"fleetData\", fleetData);\n\n// Convert stored data to array format for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -499,140 +493,10 @@
         ]
     },
     {
-        "id": "4215a8f8e41d6ebe",
-        "type": "ui_table",
-        "z": "74f9e71cad0b485a",
-        "group": "5bc9e89c949c3ebb",
-        "name": "Status Table",
-        "order": 3,
-        "width": "33",
-        "height": "10",
-        "columns": [
-            {
-                "field": "selected",
-                "title": "",
-                "width": "2%",
-                "align": "center",
-                "formatter": "tickCross",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "manufacturer",
-                "title": "Manufacturer",
-                "width": "6%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "serial",
-                "title": "Serial #",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "robot_name",
-                "title": "Robot Name",
-                "width": "10%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "robot_ws/branch",
-                "title": "Branch",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "robot_ws/status",
-                "title": "Status",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "research_ws/remote",
-                "title": "Research Remote",
-                "width": "28%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "research_ws/branch",
-                "title": "Branch",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "research_ws/status",
-                "title": "Status",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "battery",
-                "title": "Battery",
-                "width": "4%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "last_online",
-                "title": "Last Seen",
-                "width": "10%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 1,
-        "cts": true,
-        "x": 910,
-        "y": 200,
-        "wires": [
-            [
-                "da4812d5446d2934"
-            ]
-        ]
-    },
-    {
         "id": "9470163941ca997e",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "debug 1",
         "active": false,
         "tosidebar": true,
@@ -650,6 +514,7 @@
         "id": "9225b179d98ad152",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "debug to console",
         "active": false,
         "tosidebar": false,
@@ -667,6 +532,7 @@
         "id": "fcf6ee8dd005be1d",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "debug 2",
         "active": false,
         "tosidebar": true,
@@ -684,6 +550,7 @@
         "id": "6750ecdadbf2dc4e",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "Set 'Selected'",
         "func": "// Extract manufacturer and serial number\nlet manufacturer = msg.payload.manufacturer;\nlet serial = msg.payload.serial;\n\n// Retrieve or initialize stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\");\n\n// Update the correct field based on whether it's already selected\nlet selected = msg.payload.selected;\nif (selected === false) {\n    fleetData[manufacturer][serial].selected = true\n} else {\n    fleetData[manufacturer][serial].selected = false\n}\n\n// Store the updated data persistently\nflow.set(\"fleetData\", fleetData);\n\n// Convert stored data to array format for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;\n",
         "outputs": 1,
@@ -705,6 +572,7 @@
         "id": "6945521eefaf77e0",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "Clear fleetData",
         "func": "// Store the updated data persistently\nflow.set(\"fleetData\", {});\n\n// Convert stored data to array format for ui_table\nmsg.payload = [];\n\nreturn msg;\n",
         "outputs": 1,
@@ -726,6 +594,7 @@
         "type": "ui_button",
         "z": "74f9e71cad0b485a",
         "d": true,
+        "g": "065e8addc2012fa3",
         "name": "",
         "group": "ddc248bb9c67f143",
         "order": 3,
@@ -754,6 +623,7 @@
         "id": "3595bb0fa2704c6b",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "debug 5",
         "active": false,
         "tosidebar": true,
@@ -771,6 +641,7 @@
         "id": "dd5e596b9388619d",
         "type": "ui_form",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Update Robot Workspace",
         "label": "",
         "group": "87c41f4ea777e050",
@@ -828,8 +699,8 @@
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 230,
-        "y": 540,
+        "x": 190,
+        "y": 440,
         "wires": [
             [
                 "67e32e6a6e0bb464",
@@ -841,6 +712,7 @@
         "id": "67e32e6a6e0bb464",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Identify Selected Robots",
         "func": "// Extract form fields from msg.payload\nlet formData = msg.payload;  // Assumes payload contains {remote, branch, time, date, token}\n\n// Retrieve fleetData from flow context\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Initialize an array to store MQTT messages\nlet mqttMessages = [];\n\n// Iterate through fleetData to find selected items\nfor (const [manufacturer, serials] of Object.entries(fleetData)) {\n    for (const [serial, data] of Object.entries(serials)) {\n        // Check if 'selected' exists and is true\n        if (data.selected === true) {\n            // Construct MQTT topic\n            for (const [key, value] of Object.entries(formData)) {\n                let topic = `mrs_fleet_dashboard/${manufacturer}/${serial}/dashboard/updates/robot_ws/${key}`;\n\n                // Construct MQTT message\n                let mqttMessage = {\n                    topic: topic,\n                    payload: JSON.stringify(value),  // Sending the form data as JSON\n                    qos: 1,\n                    retain: false\n                };\n\n                // Add to messages list\n                mqttMessages.push(mqttMessage);\n            }\n        }\n    }\n}\n\n// Return messages for MQTT output node\nreturn [mqttMessages];",
         "outputs": 1,
@@ -849,8 +721,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 540,
+        "x": 490,
+        "y": 440,
         "wires": [
             [
                 "90bb86db1fda5610"
@@ -861,6 +733,7 @@
         "id": "90bb86db1fda5610",
         "type": "mqtt out",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "",
         "topic": "",
         "qos": "0",
@@ -871,14 +744,15 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 750,
-        "y": 540,
+        "x": 710,
+        "y": 440,
         "wires": []
     },
     {
         "id": "cf5cdb25f59c4dd0",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "debug 6",
         "active": false,
         "tosidebar": true,
@@ -888,14 +762,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 500,
+        "x": 440,
+        "y": 400,
         "wires": []
     },
     {
         "id": "df4b4b5dbaa15336",
         "type": "ui_form",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Update Research Workspace",
         "label": "",
         "group": "a7f52d91f67fcff8",
@@ -953,8 +828,8 @@
         "topicType": "msg",
         "splitLayout": true,
         "className": "",
-        "x": 240,
-        "y": 620,
+        "x": 200,
+        "y": 520,
         "wires": [
             [
                 "be3ce65dd88a5bc0",
@@ -966,6 +841,7 @@
         "id": "be3ce65dd88a5bc0",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Identify Selected Robots",
         "func": "// Extract form fields from msg.payload\nlet formData = msg.payload;  // Assumes payload contains {remote, branch, time, date, token}\n\n// Retrieve fleetData from flow context\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Initialize an array to store MQTT messages\nlet mqttMessages = [];\n\n// Iterate through fleetData to find selected items\nfor (const [manufacturer, serials] of Object.entries(fleetData)) {\n    for (const [serial, data] of Object.entries(serials)) {\n        // Check if 'selected' exists and is true\n        if (data.selected === true) {\n            // Construct MQTT topic\n            for (const [key, value] of Object.entries(formData)) {\n                let topic = `mrs_fleet_dashboard/${manufacturer}/${serial}/dashboard/updates/research_ws/${key}`;\n\n                // Construct MQTT message\n                let mqttMessage = {\n                    topic: topic,\n                    payload: JSON.stringify(value),  // Sending the form data as JSON\n                    qos: 1,\n                    retain: false\n                };\n\n                // Add to messages list\n                mqttMessages.push(mqttMessage);\n            }\n        }\n    }\n}\n\n// Return messages for MQTT output node\nreturn [mqttMessages];",
         "outputs": 1,
@@ -974,8 +850,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 620,
+        "x": 490,
+        "y": 520,
         "wires": [
             [
                 "2ae68555841e65a8"
@@ -986,6 +862,7 @@
         "id": "2ae68555841e65a8",
         "type": "mqtt out",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "",
         "topic": "",
         "qos": "0",
@@ -996,14 +873,15 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 750,
-        "y": 620,
+        "x": 710,
+        "y": 520,
         "wires": []
     },
     {
         "id": "74e0dc6829d71889",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "debug 7",
         "active": false,
         "tosidebar": true,
@@ -1013,14 +891,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 580,
+        "x": 440,
+        "y": 480,
         "wires": []
     },
     {
         "id": "2f36ddca0efb1b87",
         "type": "ui_form",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "MFD Branch",
         "label": "",
         "group": "b7a68b9898db523f",
@@ -1054,8 +933,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 190,
-        "y": 700,
+        "x": 150,
+        "y": 600,
         "wires": [
             [
                 "c1954bb2815db530",
@@ -1067,6 +946,7 @@
         "id": "c1954bb2815db530",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Identify Selected Robots",
         "func": "// Extract form fields from msg.payload\nlet formData = msg.payload;  // Assumes payload contains {remote, branch, time, date, token}\n\n// Retrieve fleetData from flow context\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Initialize an array to store MQTT messages\nlet mqttMessages = [];\n\n// Iterate through fleetData to find selected items\nfor (const [manufacturer, serials] of Object.entries(fleetData)) {\n    for (const [serial, data] of Object.entries(serials)) {\n        // Check if 'selected' exists and is true\n        if (data.selected === true) {\n            // Construct MQTT topic\n            for (const [key, value] of Object.entries(formData)) {\n                let topic = `mrs_fleet_dashboard/${manufacturer}/${serial}/dashboard/updates/mrs_fleet_dashboard/${key}`;\n\n                // Construct MQTT message\n                let mqttMessage = {\n                    topic: topic,\n                    payload: JSON.stringify(value),  // Sending the form data as JSON\n                    qos: 1,\n                    retain: false\n                };\n\n                // Add to messages list\n                mqttMessages.push(mqttMessage);\n            }\n        }\n    }\n}\n\n// Return messages for MQTT output node\nreturn [mqttMessages];",
         "outputs": 1,
@@ -1075,8 +955,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 700,
+        "x": 490,
+        "y": 600,
         "wires": [
             [
                 "c42d8eb44093a8a8"
@@ -1087,6 +967,7 @@
         "id": "c42d8eb44093a8a8",
         "type": "mqtt out",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "",
         "topic": "",
         "qos": "0",
@@ -1097,14 +978,15 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 750,
-        "y": 700,
+        "x": 710,
+        "y": 600,
         "wires": []
     },
     {
         "id": "6f3fc8b9413b54ca",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "debug 8",
         "active": false,
         "tosidebar": true,
@@ -1114,14 +996,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 660,
+        "x": 440,
+        "y": 560,
         "wires": []
     },
     {
         "id": "75b82ca5b7612472",
         "type": "ui_form",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Send Command",
         "label": "",
         "group": "6b3dd49f3efda1e9",
@@ -1147,8 +1030,8 @@
         "topicType": "msg",
         "splitLayout": "",
         "className": "",
-        "x": 200,
-        "y": 780,
+        "x": 160,
+        "y": 680,
         "wires": [
             [
                 "397cadc00c1f0057",
@@ -1160,6 +1043,7 @@
         "id": "397cadc00c1f0057",
         "type": "function",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "Identify Selected Robots",
         "func": "// Extract form fields from msg.payload\nlet formData = msg.payload;  // Assumes payload contains {remote, branch, time, date, token}\n\n// Retrieve fleetData from flow context\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Initialize an array to store MQTT messages\nlet mqttMessages = [];\n\n// Iterate through fleetData to find selected items\nfor (const [manufacturer, serials] of Object.entries(fleetData)) {\n    for (const [serial, data] of Object.entries(serials)) {\n        // Check if 'selected' exists and is true\n        if (data.selected === true) {\n            // Construct MQTT topic\n            for (const [key, value] of Object.entries(formData)) {\n                let topic = `mrs_fleet_dashboard/${manufacturer}/${serial}/dashboard/updates/command/${key}`;\n\n                // Construct MQTT message\n                let mqttMessage = {\n                    topic: topic,\n                    payload: JSON.stringify(value),  // Sending the form data as JSON\n                    qos: 1,\n                    retain: false\n                };\n\n                // Add to messages list\n                mqttMessages.push(mqttMessage);\n            }\n        }\n    }\n}\n\n// Return messages for MQTT output node\nreturn [mqttMessages];",
         "outputs": 1,
@@ -1168,11 +1052,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 530,
-        "y": 780,
+        "x": 490,
+        "y": 680,
         "wires": [
             [
-                "0da68d9a718f967f"
+                "0da68d9a718f967f",
+                "5804debd24358ad1"
             ]
         ]
     },
@@ -1180,6 +1065,7 @@
         "id": "0da68d9a718f967f",
         "type": "mqtt out",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "",
         "topic": "",
         "qos": "0",
@@ -1190,14 +1076,15 @@
         "correl": "",
         "expiry": "",
         "broker": "89d704a479c1d238",
-        "x": 750,
-        "y": 780,
+        "x": 710,
+        "y": 680,
         "wires": []
     },
     {
         "id": "e0d20763fcb9fec3",
         "type": "debug",
         "z": "74f9e71cad0b485a",
+        "g": "8c737d03eeb53742",
         "name": "debug 9",
         "active": false,
         "tosidebar": true,
@@ -1207,14 +1094,15 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 480,
-        "y": 740,
+        "x": 440,
+        "y": 640,
         "wires": []
     },
     {
         "id": "0cfe446621403423",
         "type": "link in",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "link in 1",
         "links": [
             "da4812d5446d2934"
@@ -1232,19 +1120,21 @@
         "id": "da4812d5446d2934",
         "type": "link out",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "name": "link out 1",
         "mode": "link",
         "links": [
             "0cfe446621403423"
         ],
-        "x": 1055,
-        "y": 260,
+        "x": 1295,
+        "y": 200,
         "wires": []
     },
     {
         "id": "8bc3dfad47706ba0",
         "type": "link out",
         "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
         "name": "link out 3",
         "mode": "link",
         "links": [
@@ -1258,28 +1148,218 @@
         "id": "491d74570f78fcd8",
         "type": "link in",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "name": "link in 3",
         "links": [
             "8bc3dfad47706ba0"
         ],
-        "x": 715,
-        "y": 240,
+        "x": 905,
+        "y": 160,
         "wires": [
             [
-                "4215a8f8e41d6ebe",
                 "da09126c166f9ab3",
                 "3f819778fbd57881",
+                "8bfa5fe0d1af789b",
                 "b1840e90cc72f393",
-                "8bfa5fe0d1af789b"
+                "8283acf73809cbdb",
+                "31cb5bd00f8ab31c"
             ]
         ]
+    },
+    {
+        "id": "13fe6428fe367839",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "g": "542b1219a90acbc7",
+        "name": "",
+        "group": "5bc9e89c949c3ebb",
+        "order": 4,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 400,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "f7574207e2e38e36",
+        "type": "function",
+        "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
+        "name": "Clear selected",
+        "func": "// Retrieve (or initialize) stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Loop through manufacturers\nfor (let manufacturer in fleetData) {\n    // Loop through serial numbers\n    for (let serial in fleetData[manufacturer]) {\n        // Set every entry to selected = false\n        fleetData[manufacturer][serial].selected = false;\n    }\n}\n\n// Store the updated data\nflow.set(\"fleetData\", fleetData);\n\n// Convert to array for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "8bc3dfad47706ba0"
+            ]
+        ]
+    },
+    {
+        "id": "940199a89db81820",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "g": "542b1219a90acbc7",
+        "name": "",
+        "group": "3de19491c2d96cf1",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 440,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "e21511220980e71e",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "g": "542b1219a90acbc7",
+        "name": "",
+        "group": "cffc62065f25e999",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 520,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "1b6cb4c8e1b9e186",
+        "type": "ui_button",
+        "z": "74f9e71cad0b485a",
+        "g": "542b1219a90acbc7",
+        "name": "",
+        "group": "9f7e46cb54397403",
+        "order": 3,
+        "width": "4",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset Selection",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 480,
+        "wires": [
+            [
+                "86372449206debc2"
+            ]
+        ]
+    },
+    {
+        "id": "230b0d04c3fc672a",
+        "type": "link in",
+        "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
+        "name": "link in 2",
+        "links": [
+            "86372449206debc2"
+        ],
+        "x": 345,
+        "y": 260,
+        "wires": [
+            [
+                "f7574207e2e38e36",
+                "0ba4b3e4236e628d"
+            ]
+        ]
+    },
+    {
+        "id": "86372449206debc2",
+        "type": "link out",
+        "z": "74f9e71cad0b485a",
+        "g": "542b1219a90acbc7",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "230b0d04c3fc672a"
+        ],
+        "x": 1055,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0ba4b3e4236e628d",
+        "type": "debug",
+        "z": "74f9e71cad0b485a",
+        "g": "065e8addc2012fa3",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "da09126c166f9ab3",
         "type": "ui_table",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "group": "ddc248bb9c67f143",
-        "name": "Status Table",
+        "name": "Repository Table",
         "order": 2,
         "width": "35",
         "height": "18",
@@ -1385,22 +1465,21 @@
                 }
             }
         ],
-        "outputs": 1,
-        "cts": true,
-        "x": 910,
-        "y": 160,
-        "wires": [
-            []
-        ]
+        "outputs": 0,
+        "cts": false,
+        "x": 1090,
+        "y": 60,
+        "wires": []
     },
     {
         "id": "3f819778fbd57881",
         "type": "ui_table",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "group": "3de19491c2d96cf1",
-        "name": "Status Table",
+        "name": "Research WS Table",
         "order": 2,
-        "width": "33",
+        "width": "35",
         "height": "10",
         "columns": [
             {
@@ -1444,26 +1523,6 @@
                 }
             },
             {
-                "field": "robot_ws/branch",
-                "title": "Branch",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "robot_ws/status",
-                "title": "Status",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
                 "field": "research_ws/remote",
                 "title": "Research Remote",
                 "width": "28%",
@@ -1494,16 +1553,6 @@
                 }
             },
             {
-                "field": "battery",
-                "title": "Battery",
-                "width": "4%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
                 "field": "last_online",
                 "title": "Last Seen",
                 "width": "10%",
@@ -1516,8 +1565,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 910,
-        "y": 240,
+        "x": 1090,
+        "y": 180,
         "wires": [
             [
                 "da4812d5446d2934"
@@ -1528,10 +1577,11 @@
         "id": "8bfa5fe0d1af789b",
         "type": "ui_table",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "group": "9f7e46cb54397403",
-        "name": "Status Table",
+        "name": "Command Table",
         "order": 2,
-        "width": "33",
+        "width": "35",
         "height": "10",
         "columns": [
             {
@@ -1647,8 +1697,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 910,
-        "y": 320,
+        "x": 1080,
+        "y": 260,
         "wires": [
             [
                 "da4812d5446d2934"
@@ -1659,10 +1709,211 @@
         "id": "b1840e90cc72f393",
         "type": "ui_table",
         "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
         "group": "cffc62065f25e999",
-        "name": "Status Table",
+        "name": "FMD Table",
         "order": 2,
-        "width": "33",
+        "width": "35",
+        "height": "10",
+        "columns": [
+            {
+                "field": "selected",
+                "title": "",
+                "width": "2%",
+                "align": "center",
+                "formatter": "tickCross",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "manufacturer",
+                "title": "Manufacturer",
+                "width": "6%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "serial",
+                "title": "Serial #",
+                "width": "8%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "robot_name",
+                "title": "Robot Name",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "dashboard_ws/remote",
+                "title": "Dashboard Remote",
+                "width": "28%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "dashboard_ws/branch",
+                "title": "Branch",
+                "width": "8%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "dashboard_ws/status",
+                "title": "Status",
+                "width": "8%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "last_online",
+                "title": "Last Seen",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            [
+                "da4812d5446d2934"
+            ]
+        ]
+    },
+    {
+        "id": "8283acf73809cbdb",
+        "type": "ui_table",
+        "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
+        "group": "704f30af4820718b",
+        "name": "Networks Table",
+        "order": 2,
+        "width": "35",
+        "height": "18",
+        "columns": [
+            {
+                "field": "manufacturer",
+                "title": "Manufacturer",
+                "width": "6%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "serial",
+                "title": "Serial #",
+                "width": "8%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "robot_name",
+                "title": "Robot Name",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "ip",
+                "title": "IP Address",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "ssid",
+                "title": "WiFi SSID",
+                "width": "15%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "last_online",
+                "title": "Last Online",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "hostname",
+                "title": "Hostname",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "user",
+                "title": "User",
+                "width": "10%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1080,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "31cb5bd00f8ab31c",
+        "type": "ui_table",
+        "z": "74f9e71cad0b485a",
+        "g": "ce1d6c832a043a21",
+        "group": "5bc9e89c949c3ebb",
+        "name": "Robot WS Table",
+        "order": 3,
+        "width": "35",
         "height": "10",
         "columns": [
             {
@@ -1726,46 +1977,6 @@
                 }
             },
             {
-                "field": "research_ws/remote",
-                "title": "Research Remote",
-                "width": "28%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "research_ws/branch",
-                "title": "Branch",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "research_ws/status",
-                "title": "Status",
-                "width": "8%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "battery",
-                "title": "Battery",
-                "width": "4%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
                 "field": "last_online",
                 "title": "Last Seen",
                 "width": "10%",
@@ -1778,8 +1989,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 910,
-        "y": 280,
+        "x": 1080,
+        "y": 140,
         "wires": [
             [
                 "da4812d5446d2934"
@@ -1787,173 +1998,11 @@
         ]
     },
     {
-        "id": "13fe6428fe367839",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "name": "",
-        "group": "5bc9e89c949c3ebb",
-        "order": 4,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset Selection",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 980,
-        "y": 400,
-        "wires": [
-            [
-                "86372449206debc2"
-            ]
-        ]
-    },
-    {
-        "id": "f7574207e2e38e36",
-        "type": "function",
-        "z": "74f9e71cad0b485a",
-        "name": "Clear selected",
-        "func": "// Retrieve (or initialize) stored data (persistent across messages)\nlet fleetData = flow.get(\"fleetData\") || {};\n\n// Loop through manufacturers\nfor (let manufacturer in fleetData) {\n    // Loop through serial numbers\n    for (let serial in fleetData[manufacturer]) {\n        // Set every entry to selected = false\n        fleetData[manufacturer][serial].selected = false;\n    }\n}\n\n// Store the updated data\nflow.set(\"fleetData\", fleetData);\n\n// Convert to array for ui_table\nmsg.payload = Object.values(fleetData).flatMap(manufacturerData => Object.values(manufacturerData));\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 480,
-        "y": 260,
-        "wires": [
-            [
-                "8bc3dfad47706ba0"
-            ]
-        ]
-    },
-    {
-        "id": "940199a89db81820",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "name": "",
-        "group": "3de19491c2d96cf1",
-        "order": 3,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset Selection",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 980,
-        "y": 440,
-        "wires": [
-            [
-                "86372449206debc2"
-            ]
-        ]
-    },
-    {
-        "id": "e21511220980e71e",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "name": "",
-        "group": "cffc62065f25e999",
-        "order": 3,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset Selection",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 980,
-        "y": 520,
-        "wires": [
-            [
-                "86372449206debc2"
-            ]
-        ]
-    },
-    {
-        "id": "1b6cb4c8e1b9e186",
-        "type": "ui_button",
-        "z": "74f9e71cad0b485a",
-        "name": "",
-        "group": "9f7e46cb54397403",
-        "order": 3,
-        "width": "4",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset Selection",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 980,
-        "y": 480,
-        "wires": [
-            [
-                "86372449206debc2"
-            ]
-        ]
-    },
-    {
-        "id": "230b0d04c3fc672a",
-        "type": "link in",
-        "z": "74f9e71cad0b485a",
-        "name": "link in 2",
-        "links": [
-            "86372449206debc2"
-        ],
-        "x": 345,
-        "y": 260,
-        "wires": [
-            [
-                "f7574207e2e38e36",
-                "0ba4b3e4236e628d"
-            ]
-        ]
-    },
-    {
-        "id": "86372449206debc2",
-        "type": "link out",
-        "z": "74f9e71cad0b485a",
-        "name": "link out 2",
-        "mode": "link",
-        "links": [
-            "230b0d04c3fc672a"
-        ],
-        "x": 1125,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "0ba4b3e4236e628d",
+        "id": "5804debd24358ad1",
         "type": "debug",
         "z": "74f9e71cad0b485a",
-        "name": "debug 3",
-        "active": false,
+        "name": "debug 4",
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1961,8 +2010,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 300,
+        "x": 740,
+        "y": 760,
         "wires": []
     }
 ]
