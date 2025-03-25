@@ -30,16 +30,16 @@ ACTION_FUNCTIONS = {
 
 # MQTT Publisher
 class MQTTPublisher:
-    def __init__(self, broker_ip, broker_port, namespace):
+    def __init__(self, broker_ip, broker_port, namespace, client_name):
         self.namespace = namespace.rstrip('/')
         try:
             print('running with paho version post-2.0.0')
             ver = mqtt.CallbackAPIVersion.VERSION1
-            self.client = mqtt.Client(ver, 'status_publisher')
+            self.client = mqtt.Client(ver, client_name)
         except Exception as e:
             print(str(e))
             print('running with paho version pre-2.0.0')
-            self.client = mqtt.Client('status_publisher')
+            self.client = mqtt.Client(client_name)
 
         while True:
             try:
@@ -100,7 +100,8 @@ def main():
     broker_ip = os.environ.get('MQTT_BROKER_IP')
     broker_port = int(os.environ.get('MQTT_BROKER_PORT'))
     namespace = os.environ.get('MQTT_BROKER_NS')
-    publisher = MQTTPublisher(broker_ip, broker_port, namespace)
+    client_name = f'status_publisher_{manufacturer}_{serial_number}'
+    publisher = MQTTPublisher(broker_ip, broker_port, namespace, client_name)
 
     # For each workspace, schedule its actions in separate threads
     topic_group = 'dashboard/workspaces'
